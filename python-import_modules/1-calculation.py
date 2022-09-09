@@ -1,14 +1,9 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    import sys
-    number = len(sys.argv)
-
-    if number == 1:
-        print("{} arguments.".format(number - 1))
-    elif number == 2:
-        print("{} argument:".format(number - 1))
-    else:
-        print("{} arguments:".format(number - 1))
-
-    for i in range(1, number):
-        print("{}: {}".format(i, sys.argv[i]))
+    a = 10
+    b = 5
+    from calculator_1 import add, sub, mul, div
+    print("{} + {} = {}".format(a, b, add(a, b)))
+    print("{} - {} = {}".format(a, b, sub(a, b)))
+    print("{} * {} = {}".format(a, b, mul(a, b)))
+    print("{} / {} = {}".format(a, b, div(a, b)))
