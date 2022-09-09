@@ -4,4 +4,4 @@ for number in range(0, 9):
         print(89)
   else:
     for x in range(number + 1, 10):
-      print ("{}{},".format(number, x), end="")
+      print ("{}{}, ".format(number, x), end="")
