@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-for number in range (0, 10):
-  for x in range (0, 10):
-    print("{}{}".format(number, x), end=' ')
+for number in range (0,99):
+  print("{:02}, ".format(number), end="")
+print("99")
