@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/usr/bin/python3
 for number in range (0, 9):
   if number == 8:
     print(89)
