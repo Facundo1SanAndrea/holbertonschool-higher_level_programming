@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-from re import X
 
 
 def max_integer(my_list=[]):
