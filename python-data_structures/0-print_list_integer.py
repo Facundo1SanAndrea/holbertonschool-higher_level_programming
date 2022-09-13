@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-my_list = [1, 2, 3, 4, 5]
-print str.format(my_list)[1:-1]
+def print_list_integer(my_list=[]):
+  print("{:d}",str.format(my_list))
