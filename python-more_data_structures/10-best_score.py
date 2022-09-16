@@ -6,9 +6,9 @@ def best_score(a_dictionary):
 
     Newvalue = 0
     NewSpaces = ""
-    for i in a_dictionary.keys():
-        if a_dictionary[i] > Newvalue:
-            Newvalue = a_dictionary[i]
-            NewSpaces = I
+    for key in a_dictionary.keys():
+        if a_dictionary[key] > Newvalue:
+            Newvalue = a_dictionary[key]
+            NewSpaces = key
 
     return NewSpaces
