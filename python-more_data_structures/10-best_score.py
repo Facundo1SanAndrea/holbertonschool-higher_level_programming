@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 
-from re import I
-
-
 def best_score(a_dictionary):
     if a_dictionary is None or len(a_dictionary) == 0:
         return None
