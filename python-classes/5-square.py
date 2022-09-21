@@ -2,18 +2,17 @@
 """Square class"""
 
 
-
 class Square:
     """square class"""
     def __init__(self, size=0):
         """class that defines a squares by instance attributes size"""
         self.__size = size
-    
+
     @property
     def size(self):
         """"initialization of the property"""
         return self.__size
-    
+
     @size.setter
     def size(self, value):
         if type(value) != int:
