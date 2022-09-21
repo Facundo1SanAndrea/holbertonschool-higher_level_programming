@@ -2,8 +2,6 @@
 """Square class"""
 
 
-from ctypes import sizeof
-
 
 class Square:
     """square class"""
