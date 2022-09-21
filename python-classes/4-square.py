@@ -12,7 +12,7 @@ class Square:
     def size(self):
         """initializing setter and getting size"""
         return self.__size
-    
+
     @size.setter
     def size(self, value):
         """using size and not change it value"""
