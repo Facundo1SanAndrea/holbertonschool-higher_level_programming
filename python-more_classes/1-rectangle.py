@@ -2,8 +2,6 @@
 """class Rectangle that defines a rectangle """
 
 
-from turtle import width
-
 
 class Rectangle:
     """class of a rectangle defines a rectangle"""
