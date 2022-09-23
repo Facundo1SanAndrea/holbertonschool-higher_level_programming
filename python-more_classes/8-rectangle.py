@@ -2,8 +2,6 @@
 """a class Rectangle that defines a rectangle"""
 
 
-from tkinter.messagebox import RETRY
-
 
 class Rectangle:
     """Class of the rectangle"""
