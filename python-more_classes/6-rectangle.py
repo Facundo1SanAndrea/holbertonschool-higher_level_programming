@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""a class Rectangle that defines a rectangle"""
+"""Module"""
 
 
-class Rectangle:
-    """Class of the rectangle"""
+class Rectangle():
+    """Class Rectangle"""
 
     number_of_instances = 0
 
@@ -14,8 +14,7 @@ class Rectangle:
 
     @property
     def width(self):
-        """retirbe the width"""
-        return self.__width
+        return (self.__width)
 
     @width.setter
     def width(self, value):
@@ -27,8 +26,7 @@ class Rectangle:
 
     @property
     def height(self):
-        """retrives the height"""
-        return self.__height
+        return (self.__height)
 
     @height.setter
     def height(self, value):
@@ -39,29 +37,27 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """returns the rectangle area"""
-        return self.width * self.height
+        return (self.__width * self.__height)
 
     def perimeter(self):
-        """returns the rectangle perimeter"""
-        if self.width == 0 or self.height == 0:
-            return 0
-        return (2 * (self.height + self.width))
+        if self.__height == 0 or self.__width == 0:
+            return (0)
+        return ((self.__width + self.__height) * 2)
 
     def __str__(self):
-        """retrive a new string to it"""
-        space_string = ""
-        if self.width != 0:
-            for i in range(self.height):
-                space_string += "#" * self.width
-                if i != self.height - 1:
-                    space_string += "\n"
-        return space_string
+        st = ''
+        if self.__height == 0 or self.__width == 0:
+            st = ''
+        else:
+            for i in range(self.__height):
+                st += '#' * self.__width
+                if i != self.__height - 1:
+                    st += '\n'
+        return (st)
 
     def __repr__(self):
-        """return a string representation of the rectangle"""
-        return (f"Rectangle({self.width}, {self.height})")
+        return ("Rectangle({}, {})".format(self.__width, self.__height))
 
     def __del__(self):
-        """Print the message Bye rectangle."""
         print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
