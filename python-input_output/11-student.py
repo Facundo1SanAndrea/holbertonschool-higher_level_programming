@@ -1,27 +1,25 @@
 #!/usr/bin/python3
-"""class Student that defines a student """
+"""a class that defines a students """
 
 
+class Student():
+    """ Module """
 
-class Student:
-    """A clas that defines a student"""
     def __init__(self, first_name, last_name, age):
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
     def to_json(self, attrs=None):
-        list_ = {}
-        self_dict = self.__dict__
+        if isinstance(attrs, list):
+            new_dict = {}
+            for atr in attrs:
+                for key, value in self.__dict__.items():
+                    if atr == key:
+                        new_dict[key] = value
+            return new_dict
+        else:
+            return self.__dict__
 
-        if attrs is None:
-            return self_dict
-
-        if type(attrs) is list:
-            for i in attrs:
-                if hasattr(self, i):
-                    list_[i] = getattr(self, i)
-            return list_
-
-        def  reload_from_json(self, json):
-            self.__dict__.update(json)
+    def reload_from_json(self, json):
+        self.__dict__.update(json)
