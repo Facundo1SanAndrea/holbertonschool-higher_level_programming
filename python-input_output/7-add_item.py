@@ -1,17 +1,20 @@
 #!/usr/bin/python3
-"""python list """
-import sys
+"""Module"""
+
+
 import os
+import sys
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
-args = sys.argv[1:]
 filename = "add_item.json"
-listObject = []
-
-if os.path.exists(filename):
-    listObject = load_from_json_file(filename)
-
-for element in args:
-    listObject.append(element)
-save_to_json_file(listObject, filename)
+if not os.path.exists(filename):
+    save_to_json_file(sys.argv[1:], filename)
+    exit()
+try:
+    p_list = load_from_json_file(filename)
+    for i in range(1, len(sys.argv)):
+        p_list.append(sys.argv[i])
+    save_to_json_file(p_list, filename)
+except Exception:
+    Exception
