@@ -1,20 +1,18 @@
 #!/usr/bin/python3
-"""Module"""
-
-
-import os
+"""add item to module"""
 import sys
+import os
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
-filename = "add_item.json"
-if not os.path.exists(filename):
-    save_to_json_file(sys.argv[1:], filename)
-    exit()
-try:
-    p_list = load_from_json_file(filename)
+if os.path.exists("add_item.json") is False:
+    lst = []
     for i in range(1, len(sys.argv)):
-        p_list.append(sys.argv[i])
-    save_to_json_file(p_list, filename)
-except Exception:
-    Exception
+        lst.append(sys.argv[i])
+    save_to_json_file(lst, "add_item.json")
+else:
+    lstJs = []
+    lstJs = load_from_json_file("add_item.json")
+    for i in range(1, len(sys.argv)):
+        lstJs.append(sys.argv[i])
+    save_to_json_file(lstJs, "add_item.json")
