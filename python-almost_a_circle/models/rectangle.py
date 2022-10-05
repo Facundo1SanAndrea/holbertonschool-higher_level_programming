@@ -2,11 +2,12 @@
 """Module Rectangle"""
 from models.base import Base
 
+
 class Rectangle(Base):
     """Class Rectangle"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """def for cosntruc"""
+        """Constructor"""
 
         self.width = width
         self.height = height
@@ -16,28 +17,28 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """property width"""
+        """Getter for width"""
         return self.__width
 
     @property
     def height(self):
-        """propety for height"""
+        """Getter for height"""
         return self.__height
 
     @property
     def x(self):
-        """property for x"""
+        """Getter for x"""
         return self.__x
 
     @property
     def y(self):
-        """property for y"""
+        """Getter for y"""
         return self.__y
 
     @width.setter
-    def height(self, value):
-        """setter for height"""
-        if type(value) != int:
+    def width(self, value):
+        """Setter for width"""
+        if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must be > 0")
@@ -45,8 +46,8 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
-        """setter for height"""
-        if type(value) != int:
+        """Setter for height"""
+        if type(value) is not int:
             raise TypeError("height must be an integer")
         if value <= 0:
             raise ValueError("height must be > 0")
@@ -54,8 +55,8 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-        """setter for x"""
-        if type(value) != int:
+        """Setter for x"""
+        if type(value) is not int:
             raise TypeError("x must be an integer")
         if value < 0:
             raise ValueError("x must be >= 0")
@@ -63,35 +64,35 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
-        """setter for y"""
-        if type(value) != int:
+        """Setter for y"""
+        if type(value) is not int:
             raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
 
     def area(self):
-        """calculate area"""
+        """Return Area"""
         return self.__height * self.__width
-    
+
     def display(self):
-        """Rectangle"""
-        for y in range(self.__y):
+        """Print Rectangle"""
+        for ziy in range(self.__y):
             print()
         for i in range(self.__height):
-            for x in range(self.__x):
+            for zix in range(self.__x):
                 print(" ", end="")
-            for w in range(self.__width):
+            for j in range(self.__width):
                 print("#", end="")
             print()
 
     def __str__(self):
-        """class str"""
+        """Return Class represent str"""
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - \
 {self.__width}/{self.__height}"
 
     def update(self, *args, **kwargs):
-        """dictionary key"""
+        """Dictionary key/value to attributes"""
         if args:
             if args[0]:
                 self.id = args[0]
@@ -117,6 +118,6 @@ class Rectangle(Base):
                     self.__y = value
 
     def to_dictionary(self):
-        """dic repre"""
+        """Dictionary representation"""
         return {'id': self.id, 'width': self.width, 'height': self.height,
                 'x': self.x, 'y': self.y}
