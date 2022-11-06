@@ -1,0 +1,2 @@
+-- Script that LIST ALL TABLES
+SHOW TABLES;
