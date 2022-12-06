@@ -1,5 +1,7 @@
 #!/usr/bin/node
 /*TASK 4*/
-import { argv } from 'node:process'
+const args = process.args;
+const a = ' is ';
+const empty = '';
 
-console.log('%s is %s', argv[2], argv[3]);
+console.log(empty.concat(args[2], a, args[3]));

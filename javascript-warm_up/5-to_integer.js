@@ -1,9 +1,9 @@
 #!/usr/bin/node
 /*TASK 5*/ 
-import { argv } from 'node:process';
+const args = process.argv;
 
-if (parseInt(argv[2])) {
-    console.log('My number: %d', parseInt(argv[2]));
+if (args.length === 3 && parseInt(args[2])) {
+  console.log('My number:', parseInt(args[2]));
 } else {
-    console.log('Not a number');
+  console.log('Not a number');
 }
