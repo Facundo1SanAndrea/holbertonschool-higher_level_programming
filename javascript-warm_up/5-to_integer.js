@@ -1,5 +1,5 @@
 #!/usr/bin/node
-/*TASK 5*/ 
+
 const args = process.argv;
 
 if (args.length === 3 && parseInt(args[2])) {

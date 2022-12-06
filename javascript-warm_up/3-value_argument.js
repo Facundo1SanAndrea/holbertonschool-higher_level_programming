@@ -1,5 +1,5 @@
 #!/usr/bin/node
-/*TASK 3*/
+
 require('process')
 
 if (process.argv[2]) {

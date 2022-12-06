@@ -1,5 +1,5 @@
 #!/usr/bin/node
-/*TASK 4*/
+
 const args = process.args;
 const a = ' is ';
 const empty = '';

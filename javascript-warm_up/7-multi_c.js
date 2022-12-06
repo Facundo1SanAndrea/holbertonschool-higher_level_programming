@@ -1,5 +1,5 @@
 #!/usr/bin/node
-/*TASK 7*/
+
 
 const str = 'C is fun';
 const i = process.argv[2];
