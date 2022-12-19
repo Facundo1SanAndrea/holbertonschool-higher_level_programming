@@ -1,13 +1,9 @@
 #!/usr/bin/node
-// Display the status code of a GET request
-
-const FilePath = process.argv[2];
 const request = require('request');
-
-request(FilePath, (error, response) => {
+request(process.argv[2], function (error, response) {
   if (error) {
-    console.log(error);
+    console.error('error:', error);
   } else {
-    console.log('code: ' + response.statusCode);
+    console.log('code:', response && response.statusCode);
   }
 });
